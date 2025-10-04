@@ -2,10 +2,13 @@ import { Mail, MapPin, Users, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <footer id="contact" className="py-24 bg-foreground text-background">
+    <footer id="contact" className="py-24 bg-red-500 text-white min-h-screen">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">Get in Touch</h2>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">Get in Touch - CONTACT SECTION</h2>
+          <div className="mb-8 p-4 bg-yellow-400 text-black rounded-lg">
+            <p className="text-lg font-bold">이 텍스트가 보이면 Contact 섹션이 정상적으로 렌더링된 것입니다!</p>
+          </div>
           <p className="text-xl mb-16 opacity-90 font-light leading-relaxed">
             Interested in collaborating or joining our lab? We'd love to hear from you.
           </p>

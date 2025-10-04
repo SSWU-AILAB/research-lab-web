@@ -1,4 +1,4 @@
-import { Brain, Target, Users } from 'lucide-react';
+import { Brain, Cpu, Radar, Users } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const About = () => {
@@ -24,20 +24,24 @@ const About = () => {
 
   const features = [
     {
-      icon: Brain,
-      title: 'Advanced AI Research',
-      description: 'Pushing the boundaries of machine learning and deep learning technologies',
+      icon: Radar,
+      title: 'Multimodal Sensing',
+      description: 'Integrating IMU, PPG, Wi-Fi CSI, and location data to understand human behavior and context.',
     },
     {
-      icon: Target,
-      title: 'Real-World Impact',
-      description: 'Developing solutions that address critical challenges in society and industry',
+      icon: Cpu,
+      title: 'On-device Intelligence',
+      description: 'Developing lightweight AI models for real-time inference on wearables and mobile devices.',
     },
     {
       icon: Users,
-      title: 'Collaborative Environment',
-      description: 'Fostering innovation through interdisciplinary collaboration and mentorship',
+      title: 'Human-centered Research',
+      description: 'Designing technologies that improve human safety, health, and everyday experience.',
     },
+    { icon: Brain,
+      title: 'AI & Reasoning',
+      description: 'Leveraging LLMs and machine learning to interpret multimodal signals intelligently.',
+    }
   ];
 
   return (
@@ -46,11 +50,8 @@ const About = () => {
         <div className={`max-w-4xl mx-auto text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">About AI LAB</h2>
           <p className="text-lg text-muted-foreground leading-loose font-light">
-            AI LAB is a leading academic research laboratory dedicated to advancing the state of artificial 
-            intelligence. Our multidisciplinary team explores fundamental questions in machine learning, 
-            computer vision, natural language processing, and robotics. We strive to develop innovative 
-            algorithms and systems that push the boundaries of what AI can achieve while maintaining a 
-            strong commitment to responsible and ethical AI development.
+          Our lab explores how sensing and intelligence converge to understand humans and their environment.
+          We design multimodal systems that integrate wearable, physiological, and environmental data with AI models — creating technology that perceives the world intelligently.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Network, Eye, MessageSquare, Cpu } from 'lucide-react';
+import { Activity, HeartPulse, Wifi, MapPin, Brain } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const Research = () => {
@@ -26,32 +26,39 @@ const Research = () => {
 
   const researchAreas = [
     {
-      icon: Network,
-      title: 'Machine Learning',
+      icon: Activity,
+      title: 'IMU-based Risk Detection',
       description:
-        'Developing novel deep learning architectures and optimization techniques for improved model performance and efficiency.',
-      tags: ['Deep Learning', 'Neural Networks', 'Optimization'],
+        'Detects real-time physical risk by quantifying motion intensity and patterns from wearable accelerometers, enabling severity estimation on device.',
+      tags: ['Motion Sensing', 'Risk Detection', 'Wearable Devices'],
     },
     {
-      icon: Eye,
-      title: 'Computer Vision',
+      icon: HeartPulse,
+      title: 'PPG-based Risk Detection',
       description:
-        'Creating advanced visual recognition systems for object detection, image segmentation, and scene understanding.',
-      tags: ['Object Detection', 'Image Segmentation', '3D Vision'],
+        'Detects physiological risk by inferring breath-holding, fear, and stress states from PPG signals in real time.',
+      tags: ['PPG Signals', 'Stress Detection', 'Physiological Monitoring'],
     },
     {
-      icon: MessageSquare,
-      title: 'Natural Language Processing',
+      icon: MapPin,
+      title: 'Geofencing-based Risk Detection',
       description:
-        'Building intelligent language models for text understanding, generation, and multilingual applications.',
-      tags: ['Language Models', 'Text Generation', 'Translation'],
+        'Detects riskful situations by identifying route deviations from habitual paths and unsafe-zone entries using spatial context.',
+      tags: ['Spatial Analysis', 'Route Monitoring', 'Safety Zones'],
     },
     {
-      icon: Cpu,
-      title: 'Reinforcement Learning',
+      icon: Wifi,
+      title: 'Wi-Fi CSI Sensing',
       description:
-        'Advancing agent-based learning systems for autonomous decision-making in complex environments.',
-      tags: ['Policy Optimization', 'Multi-Agent', 'Robotics'],
+        'Detects presence and atypical movement without wearables by analyzing RF channel variations, complementing on-body sensing.',
+      tags: ['RF Sensing', 'Contactless Detection', 'Movement Analysis'],
+    },
+    {
+      icon: Brain,
+      title: 'LLM-driven Situation Reasoning',
+      description:
+        'Consolidates multimodal detections and history into operator-ready summaries and searchable reports for rapid response.',
+      tags: ['Multimodal AI', 'Report Generation', 'Situation Analysis'],
     },
   ];
 
