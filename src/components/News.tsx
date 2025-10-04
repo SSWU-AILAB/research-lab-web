@@ -49,7 +49,7 @@ const News = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-soft hover:shadow-soft-lg transition-all duration-300 animate-fade-in-up"
+                className="bg-card rounded-xl p-6 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="flex gap-6">

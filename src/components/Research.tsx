@@ -50,7 +50,7 @@ const Research = () => {
             return (
               <Card
                 key={index}
-                className="border-none shadow-soft hover:shadow-soft-lg transition-all duration-300 animate-fade-in-up"
+                className="border-none shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,31 @@ const Navigation = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
   }, []);
 
   const navLinks = [
@@ -50,7 +76,11 @@ const Navigation = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-foreground/80 hover:text-primary transition-colors font-medium"
+              className={`text-foreground/80 hover:text-primary transition-all duration-300 font-medium relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded px-2 py-1 ${
+                activeSection === link.href.substring(1)
+                  ? 'text-primary after:absolute after:bottom-0 after:left-2 after:right-2 after:h-0.5 after:bg-primary after:rounded-full'
+                  : ''
+              }`}
             >
               {link.label}
             </a>
@@ -78,7 +108,9 @@ const Navigation = () => {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+                className={`text-foreground/80 hover:text-primary transition-colors font-medium py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded px-2 ${
+                  activeSection === link.href.substring(1) ? 'text-primary font-semibold' : ''
+                }`}
               >
                 {link.label}
               </a>

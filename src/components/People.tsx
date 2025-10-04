@@ -61,7 +61,7 @@ const People = () => {
 
         {/* Principal Investigator */}
         <div className="max-w-3xl mx-auto mb-20">
-          <Card className="border-none shadow-soft-lg animate-fade-in-up">
+          <Card className="border-none shadow-soft-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up">
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
                 <img
@@ -84,7 +84,7 @@ const People = () => {
                   <div className="flex gap-4 justify-center md:justify-start">
                     <a
                       href={`mailto:${professor.email}`}
-                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded px-2 py-1 hover:underline underline-offset-4"
                     >
                       <Mail className="h-5 w-5" />
                       <span className="text-sm font-medium">Email</span>
@@ -93,7 +93,7 @@ const People = () => {
                       href={professor.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded px-2 py-1 hover:underline underline-offset-4"
                     >
                       <Linkedin className="h-5 w-5" />
                       <span className="text-sm font-medium">LinkedIn</span>
@@ -110,7 +110,7 @@ const People = () => {
           {labMembers.map((member, index) => (
             <Card
               key={index}
-              className="border-none shadow-soft hover:shadow-soft-lg transition-all duration-300 animate-fade-in-up"
+              className="border-none shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <CardContent className="p-6 text-center">

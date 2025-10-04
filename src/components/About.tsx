@@ -39,7 +39,7 @@ const About = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 animate-fade-in-up"
+                className="bg-card rounded-xl p-8 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">

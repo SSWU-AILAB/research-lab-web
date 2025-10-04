@@ -54,7 +54,7 @@ const Publications = () => {
           {publications.map((pub, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-soft hover:shadow-soft-lg transition-all duration-300 animate-fade-in-up"
+              className="bg-card rounded-xl p-6 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
@@ -74,10 +74,10 @@ const Publications = () => {
                   href={pub.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium shrink-0"
+                  className="flex items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300 font-medium shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded px-2 py-1 hover:underline underline-offset-4"
                 >
                   View Paper
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>

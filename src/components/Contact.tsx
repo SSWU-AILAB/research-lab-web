@@ -55,7 +55,7 @@ const Contact = () => {
               );
 
               return info.link ? (
-                <a key={index} href={info.link} className="block">
+                <a key={index} href={info.link} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-xl">
                   {content}
                 </a>
               ) : (
@@ -76,7 +76,7 @@ const Contact = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-lg bg-background/10 hover:bg-primary transition-colors flex items-center justify-center group"
+                    className="w-12 h-12 rounded-lg bg-background/10 hover:bg-primary transition-all duration-300 flex items-center justify-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     aria-label={social.label}
                   >
                     <Icon className="h-6 w-6 text-background group-hover:scale-110 transition-transform" />

@@ -36,7 +36,7 @@ const Hero = () => {
         <Button
           size="lg"
           onClick={scrollToContact}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft-lg hover:shadow-xl transition-all duration-300 group"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
         >
           Get in Touch
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
