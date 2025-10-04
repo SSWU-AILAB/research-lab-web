@@ -15,22 +15,21 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 z-0" style={{ background: 'var(--gradient-hero)' }}>
         <img
           src={heroImage}
           alt="AI Neural Network Visualization"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-5"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10 text-center animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
+        <h1 className="text-5xl md:text-7xl font-light mb-8 text-foreground tracking-wide">
           AI LAB
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
           Advancing the frontiers of artificial intelligence through cutting-edge research
         </p>
         <Button

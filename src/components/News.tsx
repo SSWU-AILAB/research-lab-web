@@ -1,7 +1,29 @@
-import { Calendar, Award, FileText, Users } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Award, Calendar, Newspaper, FileText, Users } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const News = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const newsItems = [
     {
       icon: Award,
@@ -34,12 +56,12 @@ const News = () => {
   ];
 
   return (
-    <section id="news" className="py-20 bg-background">
+    <section id="news" ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Latest News</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay updated with our recent achievements, publications, and lab activities
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">Latest News</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+            Recent updates and achievements from AI LAB
           </p>
         </div>
 
@@ -47,30 +69,31 @@ const News = () => {
           {newsItems.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div
+              <Card
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex gap-6">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <Badge variant="secondary" className="text-xs">
-                        {item.type}
-                      </Badge>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4" />
-                        <span>{item.date}</span>
-                      </div>
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Badge variant={item.type === 'award' ? 'default' : 'secondary'} className="font-light">
+                          {item.type}
+                        </Badge>
+                        <span className="text-sm text-muted-foreground font-light">{item.date}</span>
+                      </div>
+                      <CardTitle className="text-foreground font-light">{item.title}</CardTitle>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground font-light leading-relaxed">{item.description}</p>
+                </CardContent>
+              </Card>
             );
           })}
         </div>
