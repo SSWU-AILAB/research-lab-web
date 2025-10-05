@@ -59,8 +59,8 @@ const News = () => {
     <section id="news" ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">Latest News</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl mb-8 text-foreground tracking-wide">Latest News</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
             Recent updates and achievements from AI LAB
           </p>
         </div>
@@ -86,12 +86,12 @@ const News = () => {
                         </Badge>
                         <span className="text-sm text-muted-foreground font-light">{item.date}</span>
                       </div>
-                      <CardTitle className="text-foreground font-light">{item.title}</CardTitle>
+                      <CardTitle className="text-foreground text-lg font-medium">{item.title}</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground font-light leading-relaxed">{item.description}</p>
+                  <p className="text-muted-foreground text-sm font-light leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             );

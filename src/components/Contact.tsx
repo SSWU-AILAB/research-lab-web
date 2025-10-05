@@ -5,18 +5,18 @@ const Contact = () => {
     <footer id="contact" className="py-24 bg-red-500 text-white min-h-screen">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-wide">Get in Touch - CONTACT SECTION</h2>
+          <h2 className="text-4xl md:text-5xl mb-8 tracking-wide">Get in Touch - CONTACT SECTION</h2>
           <div className="mb-8 p-4 bg-yellow-400 text-black rounded-lg">
             <p className="text-lg font-bold">이 텍스트가 보이면 Contact 섹션이 정상적으로 렌더링된 것입니다!</p>
           </div>
-          <p className="text-xl mb-16 opacity-90 font-light leading-relaxed">
+          <p className="text-base md:text-lg mb-16 opacity-90 font-light leading-relaxed">
             Interested in collaborating or joining our lab? We'd love to hear from you.
           </p>
 
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div>
               <Mail className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
-              <h3 className="font-light mb-3">Email</h3>
+              <h3 className="font-medium mb-3 text-lg">Email</h3>
               <a
                 href="mailto:info@ailab.edu"
                 className="opacity-80 hover:opacity-100 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-opacity font-light"
@@ -26,7 +26,7 @@ const Contact = () => {
             </div>
             <div>
               <MapPin className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
-              <h3 className="font-light mb-3">Address</h3>
+              <h3 className="font-medium mb-3 text-lg">Address</h3>
               <p className="opacity-80 font-light leading-relaxed">
                 Department of Computer Science
                 <br />
@@ -37,7 +37,7 @@ const Contact = () => {
             </div>
             <div>
               <Users className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
-              <h3 className="font-light mb-3">Connect</h3>
+              <h3 className="font-medium mb-3 text-lg">Connect</h3>
               <div className="flex gap-6 justify-center">
                 <a
                   href="https://twitter.com/ailab"

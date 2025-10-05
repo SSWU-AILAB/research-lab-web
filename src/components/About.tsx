@@ -48,8 +48,8 @@ const About = () => {
     <section id="about" ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className={`max-w-4xl mx-auto text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">About AI LAB</h2>
-          <p className="text-lg text-muted-foreground leading-loose font-light">
+          <h2 className="text-4xl md:text-5xl mb-8 text-foreground tracking-wide">About AI LAB</h2>
+          <p className="text-base md:text-lg text-muted-foreground leading-loose font-light">
           Our lab explores how sensing and intelligence converge to understand humans and their environment.
           We design multimodal systems that integrate wearable, physiological, and environmental data with AI models — creating technology that perceives the world intelligently.
           </p>
@@ -67,8 +67,8 @@ const About = () => {
                 <div className="w-16 h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-6">
                   <Icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-light mb-4 text-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-medium mb-4 text-foreground">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground font-light leading-relaxed">{feature.description}</p>
               </div>
             );
           })}

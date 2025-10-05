@@ -59,8 +59,8 @@ const Publications = () => {
     <section id="publications" ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">Publications</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl mb-8 text-foreground tracking-wide">Publications</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
             Recent publications from our research lab
           </p>
         </div>
@@ -78,8 +78,8 @@ const Publications = () => {
                     <FileText className="h-6 w-6 text-primary" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-foreground font-light mb-3">{pub.title}</CardTitle>
-                    <CardDescription className="font-light">{pub.authors}</CardDescription>
+                    <CardTitle className="text-foreground text-lg font-medium mb-3">{pub.title}</CardTitle>
+                    <CardDescription className="font-light text-sm">{pub.authors}</CardDescription>
                   </div>
                 </div>
               </CardHeader>

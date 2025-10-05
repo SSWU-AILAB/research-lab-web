@@ -66,8 +66,8 @@ const Research = () => {
     <section id="research" ref={sectionRef} className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">Research Areas</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl mb-8 text-foreground tracking-wide">Research Areas</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
             Our lab focuses on advancing the state-of-the-art across multiple domains of AI research
           </p>
         </div>
@@ -85,8 +85,8 @@ const Research = () => {
                   <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mb-6">
                     <Icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="text-foreground font-light text-xl">{area.title}</CardTitle>
-                  <CardDescription className="font-light leading-relaxed">{area.description}</CardDescription>
+                  <CardTitle className="text-foreground text-xl font-medium">{area.title}</CardTitle>
+                  <CardDescription className="font-light leading-relaxed text-sm">{area.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">

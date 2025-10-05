@@ -109,8 +109,8 @@ const People = () => {
     <section id="people" ref={sectionRef} className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 text-foreground tracking-wide">Our Team</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+          <h2 className="text-4xl md:text-5xl mb-8 text-foreground tracking-wide">Our Team</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
             Meet the researchers and students driving innovation at AI LAB
           </p>
         </div>
@@ -138,9 +138,9 @@ const People = () => {
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-light text-foreground mb-3">Jaehyun Yoo</h3>
-                  <p className="text-primary mb-4 font-light">Research Director & Professor</p>
-                  <p className="text-muted-foreground mb-6 font-light leading-relaxed">
+                  <h3 className="text-2xl font-medium text-foreground mb-3">Jaehyun Yoo</h3>
+                  <p className="text-primary mb-4 font-medium">Research Director & Professor</p>
+                  <p className="text-muted-foreground text-sm mb-6 font-light leading-relaxed">
                     김교수는 15년 이상의 머신러닝 및 AI 연구 경험을 바탕으로 AI LAB을 이끌고 있습니다. 
                     해석 가능한 AI 시스템 개발과 딥러닝 아키텍처 발전에 중점을 두고 연구하고 있습니다.
                   </p>
@@ -200,8 +200,8 @@ const People = () => {
                       <User className="h-12 w-12 text-primary" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-light text-foreground">{member.name}</h3>
-                  <p className="text-sm text-primary font-light">{member.role}</p>
+                  <h3 className="text-lg font-medium text-foreground">{member.name}</h3>
+                  <p className="text-sm text-primary font-medium">{member.role}</p>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-muted-foreground text-sm mb-4 font-light leading-relaxed">{member.focus}</p>

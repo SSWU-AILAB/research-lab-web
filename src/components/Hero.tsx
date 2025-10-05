@@ -56,10 +56,10 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10 text-center animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl font-light mb-8 text-foreground tracking-wide">
+        <h1 className="text-5xl md:text-7xl mb-8 text-foreground tracking-wide">
           AI LAB
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
         Exploring human, physiological, and environmental intelligence through multimodal sensing and AI.
         </p>
         <Button
