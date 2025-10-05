@@ -32,7 +32,7 @@ const Navigation = () => {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section[id], footer[id]');
     sections.forEach((section) => observer.observe(section));
 
     return () => {
@@ -57,6 +57,7 @@ const Navigation = () => {
         behavior: 'smooth', 
         block: 'start'
       });
+      setActiveSection(href.substring(1));
       setIsMobileMenuOpen(false);
     }
   };

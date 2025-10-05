@@ -26,28 +26,28 @@ const News = () => {
 
   const newsItems = [
     {
-      icon: Award,
+      image: '/images/hero-ai.jpg',
       date: 'March 2024',
       title: 'Best Paper Award at NeurIPS 2024',
       description: 'Our research on efficient transformers received the best paper award.',
       type: 'Award',
     },
     {
-      icon: FileText,
+      image: '/images/hero-ai.jpg',
       date: 'February 2024',
       title: '3 Papers Accepted to CVPR 2024',
       description: 'Three of our submissions on computer vision have been accepted to CVPR 2024.',
       type: 'Publication',
     },
     {
-      icon: Users,
+      image: '/images/hero-ai.jpg',
       date: 'January 2024',
       title: 'Welcome New PhD Students',
       description: 'We are excited to welcome three new PhD students to our lab for Spring 2024.',
       type: 'Team',
     },
     {
-      icon: Award,
+      image: '/images/hero-ai.jpg',
       date: 'December 2023',
       title: 'NSF Grant Awarded',
       description: 'Received $1.2M NSF grant for research on interpretable AI systems.',
@@ -67,32 +67,48 @@ const News = () => {
 
         <div className="max-w-4xl mx-auto space-y-6">
           {newsItems.map((item, index) => {
-            const Icon = item.icon;
             return (
               <Card
                 key={index}
-                className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`hover-lift rounded-2xl border-border/50 overflow-hidden group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors duration-300">
-                      <Icon className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Badge variant={item.type === 'award' ? 'default' : 'secondary'} className="font-light">
-                          {item.type}
-                        </Badge>
-                        <span className="text-sm text-muted-foreground font-light">{item.date}</span>
+                  <div className="md:flex items-stretch">
+                    {/* 왼쪽: 메인 이미지 (2/3) */}
+                    <div className="md:w-2/3 w-full relative">
+                      <div className="h-72 md:h-96 w-full overflow-hidden">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
                       </div>
-                      <CardTitle className="text-foreground text-lg font-medium">{item.title}</CardTitle>
+
+                      {/* (선택) 이미지 하단 오버레이 */}
+                      <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
+                        <div className="flex items-center gap-2 text-xs opacity-90">
+                          <span className="rounded bg-white/15 px-2 py-0.5">{item.type}</span>
+                          <span className="opacity-80">{item.date}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 오른쪽: 텍스트 (1/3) */}
+                    <div className="md:w-1/3 w-full bg-background">
+                      <CardHeader className="h-full">
+                        <CardTitle className="text-foreground text-xl font-medium mb-3">
+                          {item.title}
+                        </CardTitle>
+                        <p className="text-muted-foreground text-sm font-light leading-relaxed">
+                          {item.description}
+                        </p>
+                      </CardHeader>
                     </div>
                   </div>
+
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm font-light leading-relaxed">{item.description}</p>
-                </CardContent>
               </Card>
             );
           })}

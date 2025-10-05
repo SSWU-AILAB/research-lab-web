@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Mail, Linkedin, User } from 'lucide-react';
+import { Mail, Globe, User } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 // 이미지 import
@@ -139,14 +139,13 @@ const People = () => {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-medium text-foreground mb-3">Jaehyun Yoo</h3>
-                  <p className="text-primary mb-4 font-medium">Research Director & Professor</p>
+                  <p className="text-primary mb-4 font-medium">Associate Professor</p>
                   <p className="text-muted-foreground text-sm mb-6 font-light leading-relaxed">
-                    김교수는 15년 이상의 머신러닝 및 AI 연구 경험을 바탕으로 AI LAB을 이끌고 있습니다. 
-                    해석 가능한 AI 시스템 개발과 딥러닝 아키텍처 발전에 중점을 두고 연구하고 있습니다.
+                    여기에 넣고 싶은 문장 교수님께 받기? 
                   </p>
                   <div className="flex gap-6 justify-center md:justify-start">
                     <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=jhyoo@sungshin.ac.kr&su=AI LAB 문의&body=안녕하세요, AI LAB에 문의드립니다."
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=jhyoo@sungshin.ac.kr&su=Inquiry about AI LAB&body="
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-colors font-light"
@@ -155,16 +154,16 @@ const People = () => {
                       }}
                     >
                       <Mail className="h-4 w-4" strokeWidth={1.5} />
-                      이메일
+                      Contact
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://home.ipinlabs.com/ko/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-colors font-light"
                     >
-                      <Linkedin className="h-4 w-4" strokeWidth={1.5} />
-                      LinkedIn
+                      <Globe className="h-4 w-4" strokeWidth={1.5} />
+                      IPIN LABS
                     </a>
                   </div>
                 </div>
@@ -215,7 +214,7 @@ const People = () => {
                     }}
                   >
                     <Mail className="h-3 w-3" strokeWidth={1.5} />
-                    연락하기
+                    Contact
                   </a>
                 </CardContent>
               </Card>

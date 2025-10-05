@@ -1,19 +1,16 @@
-import { Mail, MapPin, Users, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <footer id="contact" className="py-24 bg-red-500 text-white min-h-screen">
+    <footer id="contact" className="py-12 bg-neutral-600 text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl mb-8 tracking-wide">Get in Touch - CONTACT SECTION</h2>
-          <div className="mb-8 p-4 bg-yellow-400 text-black rounded-lg">
-            <p className="text-lg font-bold">이 텍스트가 보이면 Contact 섹션이 정상적으로 렌더링된 것입니다!</p>
-          </div>
+          <h2 className="text-4xl md:text-5xl mb-8 tracking-wide">Get in Touch</h2>
           <p className="text-base md:text-lg mb-16 opacity-90 font-light leading-relaxed">
-            Interested in collaborating or joining our lab? We'd love to hear from you.
+          If you’re interested in research collaboration or joining our lab, we’d be delighted to hear from you.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-12 mb-16">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <Mail className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
               <h3 className="font-medium mb-3 text-lg">Email</h3>
@@ -21,53 +18,32 @@ const Contact = () => {
                 href="mailto:info@ailab.edu"
                 className="opacity-80 hover:opacity-100 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-opacity font-light"
               >
-                info@ailab.edu
+                jhyoo@sungshin.ac.kr
               </a>
+            </div>
+            <div>
+              <Phone className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} /> 
+              <h3 className="font-medium mb-3 text-lg">Phone</h3>
+              <p className="opacity-80 font-light leading-relaxed">
+                +82-2-920-7695
+              </p>
             </div>
             <div>
               <MapPin className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
               <h3 className="font-medium mb-3 text-lg">Address</h3>
               <p className="opacity-80 font-light leading-relaxed">
-                Department of Computer Science
-                <br />
-                University Campus, Building 42
-                <br />
-                City, State 12345
-              </p>
-            </div>
-            <div>
-              <Users className="h-8 w-8 mx-auto mb-4 opacity-80" strokeWidth={1.5} />
-              <h3 className="font-medium mb-3 text-lg">Connect</h3>
-              <div className="flex gap-6 justify-center">
-                <a
-                  href="https://twitter.com/ailab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-opacity"
-                >
-                  <Twitter className="h-6 w-6" strokeWidth={1.5} />
-                </a>
-                <a
-                  href="https://linkedin.com/company/ailab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-opacity"
-                >
-                  <Linkedin className="h-6 w-6" strokeWidth={1.5} />
-                </a>
-                <a
-                  href="https://github.com/ailab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded transition-opacity"
-                >
-                  <Github className="h-6 w-6" strokeWidth={1.5} />
-                </a>
-              </div>
+              School of AI Convergence,
+              <br />
+              Sungshin Women's University,
+              <br />
+              Bomun-ro 34da-gil, Seongbuk-gu, Seoul, 02840,
+              <br />
+              Republic of Korea
+             </p>
             </div>
           </div>
 
-          <div className="border-t border-background/20 pt-8">
+          <div className="border-t border-background/20 pt-3">
             <p className="opacity-60 text-sm font-light">
               © {new Date().getFullYear()} AI LAB. All rights reserved.
             </p>
