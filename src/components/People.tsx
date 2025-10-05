@@ -117,10 +117,10 @@ const People = () => {
 
         <div className="max-w-5xl mx-auto space-y-12">
           {/* Principal Investigator */}
-          <Card className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <Card className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             <CardHeader>
               <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <div className="w-32 h-32 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <div className="w-32 h-32 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:ring-4 group-hover:ring-primary/10 transition-all duration-300">
                   <img 
                     src={교수님이미지} 
                     alt="교수님" 
@@ -177,16 +177,16 @@ const People = () => {
             {teamMembers.map((member, index) => (
               <Card
                 key={index}
-                className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${(index + 1) * 0.15}s` }}
               >
                 <CardHeader className="text-center pb-3">
-                  <div className="w-24 h-24 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                  <div className="w-24 h-24 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-6 overflow-hidden group-hover:ring-4 group-hover:ring-primary/10 transition-all duration-300">
                     {member.image ? (
                       <img 
                         src={member.image} 
                         alt={member.name} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
@@ -197,10 +197,10 @@ const People = () => {
                       />
                     ) : null}
                     <div className={`w-full h-full bg-primary/5 flex items-center justify-center ${member.image ? 'hidden' : 'flex'}`}>
-                      <User className="h-12 w-12 text-primary" strokeWidth={1.5} />
+                      <User className="h-12 w-12 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                     </div>
                   </div>
-                  <h3 className="text-lg font-medium text-foreground">{member.name}</h3>
+                  <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-300">{member.name}</h3>
                   <p className="text-sm text-primary font-medium">{member.role}</p>
                 </CardHeader>
                 <CardContent className="text-center">

@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10 text-center animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl mb-8 text-foreground tracking-wide">
+        <h1 className="text-5xl md:text-7xl mb-8 text-foreground tracking-wide animate-float">
           AI LAB
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light leading-relaxed">
@@ -38,7 +38,7 @@ const Hero = () => {
         <Button
           size="lg"
           onClick={scrollToContact}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300 group"
         >
           Get in Touch
           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

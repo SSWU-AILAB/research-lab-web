@@ -78,14 +78,14 @@ const Research = () => {
             return (
               <Card
                 key={index}
-                className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mb-6">
-                    <Icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
+                  <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 group-hover:rotate-3 transition-all duration-300">
+                    <Icon className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="text-foreground text-xl font-medium">{area.title}</CardTitle>
+                  <CardTitle className="text-foreground text-xl font-medium group-hover:text-primary transition-colors duration-300">{area.title}</CardTitle>
                   <CardDescription className="font-light leading-relaxed text-sm">{area.description}</CardDescription>
                 </CardHeader>
                 <CardContent>

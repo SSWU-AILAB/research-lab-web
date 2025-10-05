@@ -69,13 +69,13 @@ const Publications = () => {
           {publications.map((pub, index) => (
             <Card
               key={index}
-              className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+              className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0">
-                    <FileText className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                  <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors duration-300">
+                    <FileText className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <CardTitle className="text-foreground text-lg font-medium mb-3">{pub.title}</CardTitle>

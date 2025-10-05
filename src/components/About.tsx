@@ -61,13 +61,13 @@ const About = () => {
             return (
               <div
                 key={index}
-                className={`bg-card rounded-2xl p-10 shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all duration-300 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`bg-card rounded-2xl p-10 shadow-soft hover-lift group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-6">
-                  <Icon className="h-8 w-8 text-primary" strokeWidth={1.5} />
+                <div className="w-16 h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                  <Icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-medium mb-4 text-foreground">{feature.title}</h3>
+                <h3 className="text-xl font-medium mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">{feature.description}</p>
               </div>
             );

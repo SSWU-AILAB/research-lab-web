@@ -71,13 +71,13 @@ const News = () => {
             return (
               <Card
                 key={index}
-                className={`hover:-translate-y-1 hover:shadow-soft-lg transition-all duration-300 rounded-2xl border-border/50 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`hover-lift rounded-2xl border-border/50 group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
+                    <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors duration-300">
+                      <Icon className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">

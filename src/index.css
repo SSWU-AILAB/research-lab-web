@@ -125,6 +125,11 @@ All colors MUST be HSL.
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
+  * {
+    scroll-behavior: smooth;
   }
 }
 
@@ -164,6 +169,43 @@ All colors MUST be HSL.
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-pulse {
+    animation: iconPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes iconPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
   }
 }
