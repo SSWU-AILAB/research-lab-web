@@ -55,19 +55,19 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className={`bg-card rounded-2xl p-10 shadow-soft hover-lift group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
+                className={`bg-card rounded-2xl p-6 shadow-soft hover-lift group ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 rounded-xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
-                  <Icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors duration-300">
+                  <Icon className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-medium mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <h3 className="text-lg font-medium mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">{feature.description}</p>
               </div>
             );
