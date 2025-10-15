@@ -37,8 +37,12 @@ All colors MUST be HSL.
     --ring: 217 91% 60%;
 
     --radius: 1rem;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(210 20% 98%) 100%);
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(217 91% 60%) 0%,
+      hsl(210 20% 98%) 100%
+    );
 
     --sidebar-background: 0 0% 98%;
 
@@ -103,23 +107,27 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
   }
-  
+
   h1 {
     font-weight: 500;
   }
-  
+
   h2 {
     font-weight: 400;
   }
-  
-  h3, h4, h5, h6 {
+
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 400;
   }
-  
-  strong, b {
+
+  strong,
+  b {
     font-weight: 600;
   }
 
@@ -127,7 +135,7 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
   }
-  
+
   * {
     scroll-behavior: smooth;
   }
@@ -150,13 +158,15 @@ All colors MUST be HSL.
   }
 
   .shadow-soft {
-    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.03), 0 1px 3px -1px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.03),
+      0 1px 3px -1px rgba(0, 0, 0, 0.02);
   }
 
   .shadow-soft-lg {
-    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04),
+      0 2px 6px -1px rgba(0, 0, 0, 0.02);
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
   }
@@ -171,35 +181,37 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
       transform: translateY(-10px);
     }
   }
-  
+
   .hover-lift {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .icon-pulse {
     animation: iconPulse 2s ease-in-out infinite;
   }
-  
+
   @keyframes iconPulse {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1);
       opacity: 1;
     }
@@ -207,5 +219,32 @@ All colors MUST be HSL.
       transform: scale(1.05);
       opacity: 0.9;
     }
+  }
+
+  @keyframes ticker-x {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ticker-row {
+    display: flex;
+    width: max-content;
+  }
+
+  .ticker-track {
+    display: flex;
+    gap: 2rem;
+    flex-shrink: 0;
+    will-change: transform;
+    animation: ticker-x linear infinite;
+  }
+
+  /* hover 시 정지 */
+  .pause .ticker-track {
+    animation-play-state: paused;
   }
 }
