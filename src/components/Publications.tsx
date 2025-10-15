@@ -72,11 +72,11 @@ const Publications = () => {
       category: "intl-journal",
     },
     {
-      title: "스마트폰 센서를 활용한 위험 감지",
-      authors: "홍길동, 김하정",
-      venue: "한국HCI학회지",
-      year: "2022",
-      link: "https://example.com",
+      title: "생성형 AI 를 활용한 스마트워치 PPG 신호 증강 및 유효성 검증 연구",
+      authors: "김하정, 김지민, 문정윤, 유재현",
+      venue: "한국통신학회",
+      year: "2025",
+      link: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12361157",
       category: "domestic",
     },
   ];
@@ -123,7 +123,7 @@ const Publications = () => {
           >
             <PenSquare className="mx-auto mb-3 h-8 w-8 text-primary" />
             <div className="text-lg font-medium">International Journal</div>
-            <div className="mt-1 text-sm text-muted-foreground">{counts["intl-journal"]} items</div>
+            <div className="mt-1 text-sm text-muted-foreground">{counts["intl-journal"]} papers</div>
           </button>
 
           {/* International Conference */}
@@ -135,7 +135,7 @@ const Publications = () => {
           >
             <PenSquare className="mx-auto mb-3 h-8 w-8 text-primary" />
             <div className="text-lg font-medium">International Conference</div>
-            <div className="mt-1 text-sm text-muted-foreground">{counts["intl-conf"]} items</div>
+            <div className="mt-1 text-sm text-muted-foreground">{counts["intl-conf"]} papers</div>
           </button>
 
           {/* Domestic Journal */}
@@ -147,7 +147,7 @@ const Publications = () => {
           >
             <PenSquare className="mx-auto mb-3 h-8 w-8 text-primary" />
             <div className="text-lg font-medium">Domestic Journal</div>
-            <div className="mt-1 text-sm text-muted-foreground">{counts["domestic"]} items</div>
+            <div className="mt-1 text-sm text-muted-foreground">{counts["domestic"]} papers</div>
           </button>
         </div>
 
